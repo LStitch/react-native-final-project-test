@@ -8,7 +8,7 @@ const Player = ({navigation}) => {
     const [searchText, setSearchText] = useState('');
     const [playerData, setPlayerData] = useState('');
     const [playerRankedData, setPlayerRankedData] = useState('');
-    const API_KEY = 'RGAPI-a18747c6-0cc3-4291-906f-b19d03c16918';
+    const API_KEY = 'RGAPI-23685266-e098-4bc2-b4e3-9d9c0654ca3b';
     
     function search4Player (event) {
         var APICallString = 'https://na1.api.riotgames.com/lol/summoner/v4/summoners/by-name/' + searchText + '?api_key=' + API_KEY;
@@ -36,13 +36,21 @@ const Player = ({navigation}) => {
         <View style={styles.container}>
             <Text> League of Legends Player Search</Text>
             <Input type='text' onChange={e => setSearchText(e.target.value)}></Input>
-            <Button onClick={(e => search4Player(e))}>Search</Button>
+            
+        </View>
+    )
+}
+
+export default Player
+
+/*
+<Button onClick={(e => search4Player(e))}>Search</Button>
             {JSON.stringify(playerData) != '{}' ? 
             <Text>{playerData.name}
             <Image src={'http://ddragon.leagueoflegends.com/cdn/11.21.1/img/profileicon/' + playerData.profileIconId + '.png'}></Image>
             Summoner level {playerData.summonerLevel}</Text>
-            //<Image></Image>
-            //<Text>Summoner level {playerData.summonerLevel}</Text>
+            <Image></Image>
+            <Text>Summoner level {playerData.summonerLevel}</Text>
             :
             <Text>No Player Data</Text>
             }
@@ -50,21 +58,18 @@ const Player = ({navigation}) => {
             <Text> Ranked SoloQ
             </Text>
             
-            //<Image></Image>
-            //<Text>Summoner level {playerData.summonerLevel}</Text>
-            //<Text>League Points {playerRankedData.leaguePoints} </Text>
-            //<Text>Wins {playerRankedData.wins}</Text>
-            //<Text>Losses {playerRankedData.losses}</Text>
-            //<Text> Total Games {playerRankedData.wins} + {playerRankedData.losses}</Text>
-            //<Text> Win Rate (({playerRankedData.wins}/({playerRankedData.wins} + {playerRankedData.losses}))*100).toFixed(1) %</Text>
+            <Image></Image>
+            <Text>Summoner level {playerData.summonerLevel}</Text>
+            <Text>{playerRankedData.tier} {playerRankedData.rank}</Text>
+            <Text>League Points {playerRankedData.leaguePoints} </Text>
+            <Text>Wins {playerRankedData.wins}</Text>
+            <Text>Losses {playerRankedData.losses}</Text>
+            <Text> Total Games {playerRankedData.wins} + {playerRankedData.losses}</Text>
+            <Text> Win Rate (({playerRankedData.wins}/({playerRankedData.wins} + {playerRankedData.losses}))*100).toFixed(1) %</Text>
             :
             <Text>No Player Data</Text>
             }
-        </View>
-    )
-}
-
-export default Player
+*/
 
 const styles = StyleSheet.create({
     container: {
