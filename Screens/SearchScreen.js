@@ -1,12 +1,12 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import {Image} from 'react-native'
-import Player from '../Screens/Prueba'
+import {Image} from 'react-native';
+import SearchPlayer from '../Screens/SearchPlayer';
 
 export default function SearchScreen() {
     return (
         <View style={styles.container}>
-            <Player/>
+            <SearchPlayer/>
             <Image source={{uri: 'https://cdn-icons-png.flaticon.com/512/25/25231.png'}}
                 style={{width: 100, height: 100}}/>
             <Text style = {styles.wordBold}>@LStitch</Text>

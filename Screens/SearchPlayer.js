@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, Button, Input, Image } from 'react-native'
 import axios from 'axios';
 
 
-const Player = ({navigation}) => {
+const SearchPlayer = ({navigation}) => {
 
     const [searchText, setSearchText] = useState('');
     const [playerData, setPlayerData] = useState('');
@@ -41,7 +41,7 @@ const Player = ({navigation}) => {
     )
 }
 
-export default Player
+export default SearchPlayer
 
 /*
 <Button onClick={(e => search4Player(e))}>Search</Button>
