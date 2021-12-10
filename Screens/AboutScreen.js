@@ -10,7 +10,7 @@ export default function App() {
         <Abautscreen
         nombre="Vega Guerrero Gerardo"
         nombre2="Gómez Flores Jesús Leonardo"
-        carrera="Tecnologias de la Información y Comunicaciones"
+        carrera="Ing. Tecnologias de la Información y Comunicaciones"
         semestre="7mo semestre"
         numero2={18212079}
         numero={18212066}
