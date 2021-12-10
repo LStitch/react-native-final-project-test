@@ -34,8 +34,9 @@ const SearchPlayer = ({navigation}) => {
 
     return (
         <View style={styles.container}>
-            <Text> League of Legends Player Search</Text>
+            <Text style={{fontSize: 15, fontWeight: 'bold', color:'white'}}>{"\n"}League of Legends Player Search{"\n"}</Text>
             <TextInput style={styles.input} onChange={e => setSearchText(e.target.value)}></TextInput>
+            <Text></Text>
             <Button title="Search" onPress={(() => search4Player())}>Search</Button>
             {
                 playerData.length == 0
@@ -46,9 +47,9 @@ const SearchPlayer = ({navigation}) => {
                 
                 :
                 <View style={styles.sumoinfo}>
-                    <Text style={{fontSize: 15, fontWeight: 'bold'}}>{playerData.name}</Text>
+                    <Text style={{fontSize: 15, fontWeight: 'bold', color:'white', alignSelf: 'center'}}>{"\n"}{playerData.name}{"\n"}{"\n"}</Text>
                     <Image style={styles.wallpapers} source={'https://ddragon.leagueoflegends.com/cdn/11.21.1/img/profileicon/'+ playerData.profileIconId + '.png'}/>
-                    <Text style={{fontSize: 15, fontWeight: 'bold'}}>Level {playerData.summonerLevel}</Text>
+                    <Text style={{fontSize: 15, fontWeight: 'bold', color: 'white', alignSelf: 'center'}}>{"\n"}Level {playerData.summonerLevel}</Text>
                 </View>
             
             }
@@ -81,10 +82,9 @@ export default SearchPlayer
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#FFF',
+        backgroundColor: '#000',
         alignItems: 'center',
-        marginBottom: 200,
-        marginTop: 200,
+        
     },
 
     sumoinfo: {
@@ -98,10 +98,17 @@ const styles = StyleSheet.create({
         margin: 12,
         borderWidth: 1,
         padding: 10,
+        color:'white',
+        borderColor: 'white',
+        textAlign: 'center'
     },
 
     wallpapers: {
         width: 80,
         height: 80,
+    },
+
+    texto: {
+        color: 'white'
     }
 });

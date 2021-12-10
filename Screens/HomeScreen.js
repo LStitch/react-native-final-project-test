@@ -1,14 +1,15 @@
 import React from 'react'
 import { StyleSheet, Text, View, Button } from 'react-native'
 import {Image} from 'react-native'
+import Constants from 'expo-constants';
 
 const HomeScreen = ({navigation}) => {
     return (
         <View style={styles.container}>
-            <Image source={{uri: 'https://esports.eldesmarque.com/wp-content/uploads/2019/09/LoL2.jpg'}}
-                style={{width: 350, height: 200}}/>
+            <Image source={{uri: 'https://c.tenor.com/JlqocrEEmlMAAAAC/darius-league-of-legends.gif'}}
+                style={{width: 400, height: 620}}/>
             <Text></Text>
-            <Text style={{fontSize: 30, fontWeight: 'bold'}}>The app to learn about league of legends universe</Text>
+            <Text style={{fontSize: 20, fontWeight: 'bold', textAlign:'center'}}>Welcome to LoL Learning App</Text>
         </View>
     )
 }
@@ -21,6 +22,7 @@ const styles = StyleSheet.create({
       backgroundColor: '#fff',
       alignItems: 'center',
       justifyContent: 'center',
+      marginTop: Constants.statusBarHeight,
     },
 });
   
