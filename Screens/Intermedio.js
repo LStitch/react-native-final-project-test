@@ -1,12 +1,14 @@
 import React from 'react'
 import { StyleSheet, Text, View, Button } from 'react-native'
 import {Image} from 'react-native'
+import { ScrollView } from 'react-native-gesture-handler'
 
 const Intermedio = ({navigation}) => {
     return (
         <View style={styles.container}>
-            <Image source={{uri: 'http://assets.stickpng.com/images/584830f5cef1014c0b5e4aa1.png'}}
-                style={{width: 300, height: 300}}/>
+            <ScrollView>
+                <Text></Text>
+            </ScrollView>
         </View>
     )
 }
@@ -18,7 +20,32 @@ const styles = StyleSheet.create({
       flex: 1,
       backgroundColor: '#fff',
       alignItems: 'center',
-      justifyContent: 'space-around',
+      justifyContent: 'center',
+      margin: 10
     },
+
+    wallpapers: {
+        width: 200,
+        height: 200,
+        margin: 15,
+        alignSelf: 'center'
+    },
+
+    texto: {
+        fontSize: 18,
+        textAlign: 'justify'
+    },
+
+    negritas: {
+        fontSize: 18,
+        textAlign: 'justify',
+        fontWeight: 'bold'
+    },
+    
+    titulo: {
+        fontSize: 25,
+        textAlign: 'center'
+    }
 });
+  
   

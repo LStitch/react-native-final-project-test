@@ -46,9 +46,9 @@ const SearchPlayer = ({navigation}) => {
                 
                 :
                 <View style={styles.sumoinfo}>
-                    <Text>{playerData.name}</Text>
+                    <Text style={{fontSize: 15, fontWeight: 'bold'}}>{playerData.name}</Text>
                     <Image style={styles.wallpapers} source={'https://ddragon.leagueoflegends.com/cdn/11.21.1/img/profileicon/'+ playerData.profileIconId + '.png'}/>
-                    <Text>Level {playerData.summonerLevel}</Text>
+                    <Text style={{fontSize: 15, fontWeight: 'bold'}}>Level {playerData.summonerLevel}</Text>
                 </View>
             
             }

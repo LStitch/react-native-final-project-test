@@ -1,5 +1,6 @@
 import React from 'react'
 import { StyleSheet, Text, View, Button } from 'react-native'
+import Constants from 'expo-constants';
 
 const ProgramarScreen = ({navigation}) => {
     return (
@@ -33,5 +34,6 @@ const styles = StyleSheet.create({
       backgroundColor: '#660000',
       alignItems: 'center',
       justifyContent: 'space-around',
+      marginTop: Constants.statusBarHeight,
     },
 });

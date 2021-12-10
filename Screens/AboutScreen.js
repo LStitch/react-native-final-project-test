@@ -1,5 +1,6 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
+import Constants from 'expo-constants';
 
 export default function AboutScreen() {
     return (
@@ -15,6 +16,7 @@ const styles = StyleSheet.create({
       backgroundColor: '#990066',
       alignItems: 'center',
       justifyContent: 'space-around',
+      marginTop: Constants.statusBarHeight,
     },
 });
   
