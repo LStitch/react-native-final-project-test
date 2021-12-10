@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, Button, Input, Image, TextInput } from 'react-native';
+import { StyleSheet, Text, View, Button, Image, TextInput } from 'react-native';
 import axios from 'axios';
 
 
@@ -45,10 +45,10 @@ const SearchPlayer = ({navigation}) => {
                 </View>
                 
                 :
-                <View>
+                <View style={styles.sumoinfo}>
                     <Text>{playerData.name}</Text>
-                    <Image style={styles.wallpapers} source={'https://ddragon.leagueoflegends.com/cdn/11.21.1/img/profileicon/5021.png'}/>
-                    <Text>Summoner Level {playerData.summonerLevel}</Text>
+                    <Image style={styles.wallpapers} source={'https://ddragon.leagueoflegends.com/cdn/11.21.1/img/profileicon/'+ playerData.profileIconId + '.png'}/>
+                    <Text>Level {playerData.summonerLevel}</Text>
                 </View>
             
             }
@@ -83,7 +83,14 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#FFF',
         alignItems: 'center',
-        justifyContent: 'space-evenly',
+        marginBottom: 200,
+        marginTop: 200,
+    },
+
+    sumoinfo: {
+        flex: 1,
+        margin: 10,
+        alignContent: 'center',
     },
 
     input: {
@@ -94,7 +101,7 @@ const styles = StyleSheet.create({
     },
 
     wallpapers: {
-        width: 260,
-        height: 260,
+        width: 80,
+        height: 80,
     }
 });

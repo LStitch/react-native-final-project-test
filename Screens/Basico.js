@@ -23,7 +23,7 @@ export default function Basico() {
 
     return (
         <View style={styles.container}>
-            <Image source={{uri: 'https://3con14.biz/js/_data/_config/js.png'}}
+            <Image source={'https://3con14.biz/js/_data/_config/js.png'}
                 style={{width: 300, height: 350}}/>
             <OpenURLButton url={sitelstitch}>LStitch Page</OpenURLButton>
         </View>
@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
       flex: 1,
       backgroundColor: '#fff',
       alignItems: 'center',
-      justifyContent: 'space-around',
+      justifyContent: 'center',
     },
 });
   
