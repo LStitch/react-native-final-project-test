@@ -1,22 +1,26 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, Image } from 'react-native'
 import Constants from 'expo-constants';
 import { ScrollView } from 'react-native-gesture-handler';
+import Stitch from '../Images/Stitch.jpg'
 
 export default function AboutScreen(props) {
     return (
         <View style={styles.container}>
             <ScrollView>
             <View>
-            <Text style={styles.texto}>{props.nombre2}</Text>
-            <Text style={styles.texto}>{props.carrera}</Text>
-            <Text style={styles.texto}>{props.semestre}</Text>
-            <Text style={styles.texto}>{props.numero}</Text> 
-
-            <Text style={styles.texto}>{props.nombre}</Text>
-            <Text style={styles.texto}>{props.carrera}</Text>
-            <Text style={styles.texto}>{props.semestre}</Text>
-            <Text style={styles.texto}>{props.numero2}</Text>
+            <Text>{"\n"}</Text>
+            <Image source={Stitch} style={{width: 150, height: 150}}/>
+            <Text style={styles.texto}>{"\n"}{props.nombre2}</Text>
+            <Text style={styles.texto}>{"\n"}{props.numero}</Text>
+            <Text style={styles.texto}>{"\n"}{props.carrera}</Text>
+            <Text style={styles.texto}>{"\n"}{props.semestre}</Text>
+            <Text>{"\n"}{"\n"}{"\n"}{"\n"}</Text>
+            <Image source={Stitch} style={{width: 150, height: 150}}/>
+            <Text style={styles.texto}>{"\n"}{props.nombre}</Text>
+            <Text style={styles.texto}>{"\n"}{props.numero2}</Text>
+            <Text style={styles.texto}>{"\n"}{props.carrera}</Text>
+            <Text style={styles.texto}>{"\n"}{props.semestre}{"\n"}</Text>
             </View>
             </ScrollView>
         </View>

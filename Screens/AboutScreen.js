@@ -8,12 +8,12 @@ export default function App() {
     return (
       <View style={styles.container}>
         <Abautscreen
-        nombre="gerardo vega guerrero"
+        nombre="Vega Guerrero Gerardo"
         nombre2="Gómez Flores Jesús Leonardo"
-        carrera="tecnologias de la infomracion y la comunicacion"
-        semestre="7to semestre"
-        numero={18212079}
-        numero2={12345677}
+        carrera="Tecnologias de la Información y Comunicaciones"
+        semestre="7mo semestre"
+        numero2={18212079}
+        numero={18212066}
         />
       </View>
     );
