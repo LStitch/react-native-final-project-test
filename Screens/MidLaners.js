@@ -22,7 +22,7 @@ export default function MidLaners() {
                 <Image source={Kassadin} style={{width: 40, height: 40}}/>  Kassadin WinRate: 51.63% PickRate: 8.59% Tier 2{"\n"}</Text>
             <Text style={{fontSize: 15}}>
                 <Image source={LeBlanc} style={{width: 40, height: 40}}/>  LeBlanc WinRate: 49.01% PickRate: 12.02% Tier 2{"\n"}</Text>
-            <Image source={{uri: 'https://pa1.narvii.com/7362/f510f2633c064a266b1fee82b215b4e220b1d5d1r1-480-270_hq.gif'}}
+            <Image source={{uri: 'https://i.pinimg.com/originals/7c/e4/3f/7ce43f3f8cbbbba86947dabcd81dbbdf.gif'}}
                 style={{width: 400, height: 200, alignSelf: 'center'}}/>
         </View>
     )

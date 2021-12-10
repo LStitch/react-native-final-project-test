@@ -22,7 +22,7 @@ export default function Supports() {
                 <Image source={Thresh} style={{width: 40, height: 40}}/>  Thresh WinRate: 48.88% PickRate: 14.11% Tier 1{"\n"}</Text>
             <Text style={{fontSize: 15}}>
                 <Image source={Maokai} style={{width: 40, height: 40}}/>  Maokai WinRate: 51.06% PickRate: 2.95% Tier 2{"\n"}</Text>
-            <Image source={{uri: 'https://pa1.narvii.com/7362/f510f2633c064a266b1fee82b215b4e220b1d5d1r1-480-270_hq.gif'}}
+            <Image source={{uri: 'https://i.pinimg.com/originals/af/77/7b/af777bc97ed6b44e787d688f53976401.gif'}}
                 style={{width: 400, height: 200, alignSelf: 'center'}}/>
         </View>
     )

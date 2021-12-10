@@ -22,7 +22,7 @@ export default function ADCarrys() {
                 <Image source={Caitlyn} style={{width: 40, height: 40}}/>  Caitlyn WinRate: 49.72% PickRate: 20.89% Tier 2{"\n"}</Text>
             <Text style={{fontSize: 15}}>
                 <Image source={Ziggs} style={{width: 40, height: 40}}/>  Ziggs WinRate: 54.17% PickRate: 2.91% Tier 2{"\n"}</Text>
-            <Image source={{uri: 'https://pa1.narvii.com/7362/f510f2633c064a266b1fee82b215b4e220b1d5d1r1-480-270_hq.gif'}}
+            <Image source={{uri: 'https://j.gifs.com/v1G8wQ.gif'}}
                 style={{width: 400, height: 200, alignSelf: 'center'}}/>
         </View>
     )

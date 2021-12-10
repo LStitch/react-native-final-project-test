@@ -22,7 +22,7 @@ export default function TopLaners() {
                 <Image source={Yone} style={{width: 40, height: 40}}/>  Yone WinRate: 48.88% PickRate: 14.11% Tier 1{"\n"}</Text>
             <Text style={{fontSize: 15}}>
                 <Image source={Teemo} style={{width: 40, height: 40}}/>  Teemo WinRate: 51.06% PickRate: 2.95% Tier 2{"\n"}</Text>
-            <Image source={{uri: 'https://pa1.narvii.com/7362/f510f2633c064a266b1fee82b215b4e220b1d5d1r1-480-270_hq.gif'}}
+            <Image source={{uri: 'https://i.pinimg.com/originals/9c/ce/c4/9ccec4f5311e4925c9be8761549fa69b.gif'}}
                 style={{width: 400, height: 200, alignSelf: 'center'}}/>
         </View>
     )

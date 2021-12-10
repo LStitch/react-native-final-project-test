@@ -22,7 +22,7 @@ export default function Junglers() {
                 <Image source={RekSai} style={{width: 40, height: 40}}/>  Rek'Sai WinRate: 53.66% PickRate: 3.67% Tier 2{"\n"}</Text>
             <Text style={{fontSize: 15}}>
                 <Image source={Elise} style={{width: 40, height: 40}}/>  Elise WinRate: 51.96% PickRate: 4.81% Tier 2{"\n"}</Text>
-            <Image source={{uri: 'https://pa1.narvii.com/7362/f510f2633c064a266b1fee82b215b4e220b1d5d1r1-480-270_hq.gif'}}
+            <Image source={{uri: 'https://c.tenor.com/neRPkkM3QCIAAAAd/oooh-hot.gif'}}
                 style={{width: 400, height: 200, alignSelf: 'center'}}/>
         </View>
     )
