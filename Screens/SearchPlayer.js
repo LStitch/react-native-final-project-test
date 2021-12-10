@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, Button, Input, Image } from 'react-native'
+import { StyleSheet, Text, View, Button, Input, Image, TextInput } from 'react-native';
 import axios from 'axios';
 
 
@@ -8,52 +8,59 @@ const SearchPlayer = ({navigation}) => {
     const [searchText, setSearchText] = useState('');
     const [playerData, setPlayerData] = useState('');
     const [playerRankedData, setPlayerRankedData] = useState('');
-    const API_KEY = 'RGAPI-23685266-e098-4bc2-b4e3-9d9c0654ca3b';
+    const API_KEY = 'RGAPI-66538383-e555-45f0-90f0-e81ca5be1dc1';
     
-    function search4Player (event) {
+    const search4Player = () => {
         var APICallString = 'https://na1.api.riotgames.com/lol/summoner/v4/summoners/by-name/' + searchText + '?api_key=' + API_KEY;
-        axios.get(APICallString).then(function (response) {
-            //Success
-            setPlayerData(response.data);
-        }).catch(function (error) {
-            //Error
-            console.log(error);
-        });
+        fetch(APICallString)
+            .then(data => {
+                return data.json()
+                }).then(resultado=>{
+                    console.log(resultado);
+                    setPlayerData(resultado);
+                });
     }
 
-    function ranked4Player (event) {
+    function ranked4Player () {
         var APICallString = 'https://na1.api.riotgames.com/lol/league/v4/entries/by-summoner/' + playerData.id + '?api_key=' + API_KEY;
-        axios.get(APICallString).then(function (response) {
-            //Success
-            setPlayerRankedData(response.data);
-        }).catch(function (error) {
-            //Error
-            console.log(error);
-        });
+        fetch(APICallString)
+            .then(data => {
+                return data.json()
+                }).then(resultado=>{
+                    console.log(resultado);
+                    setPlayerRankedData(resultado);
+                });
     }
 
     return (
         <View style={styles.container}>
             <Text> League of Legends Player Search</Text>
-            <Input type='text' onChange={e => setSearchText(e.target.value)}></Input>
+            <TextInput style={styles.input} onChange={e => setSearchText(e.target.value)}></TextInput>
+            <Button title="Search" onPress={(() => search4Player())}>Search</Button>
+            {
+                playerData.length == 0
+                ?
+                <View>
+                    <Text></Text>
+                </View>
+                
+                :
+                <View>
+                    <Text>{playerData.name}</Text>
+                    <Image style={styles.wallpapers} source={'https://ddragon.leagueoflegends.com/cdn/11.21.1/img/profileicon/5021.png'}/>
+                    <Text>Summoner Level {playerData.summonerLevel}</Text>
+                </View>
             
+            }
         </View>
     )
 }
 
 export default SearchPlayer
-
 /*
-<Button onClick={(e => search4Player(e))}>Search</Button>
-            {JSON.stringify(playerData) != '{}' ? 
-            <Text>{playerData.name}
-            <Image src={'http://ddragon.leagueoflegends.com/cdn/11.21.1/img/profileicon/' + playerData.profileIconId + '.png'}></Image>
-            Summoner level {playerData.summonerLevel}</Text>
-            <Image></Image>
-            <Text>Summoner level {playerData.summonerLevel}</Text>
-            :
-            <Text>No Player Data</Text>
-            }
+
+
+            
             {JSON.stringify(playerRankedData) != '{}' ? 
             <Text> Ranked SoloQ
             </Text>
@@ -73,7 +80,21 @@ export default SearchPlayer
 
 const styles = StyleSheet.create({
     container: {
-      flex: 1,
-      backgroundColor: '#fff',
+        flex: 1,
+        backgroundColor: '#FFF',
+        alignItems: 'center',
+        justifyContent: 'space-evenly',
     },
+
+    input: {
+        height: 40,
+        margin: 12,
+        borderWidth: 1,
+        padding: 10,
+    },
+
+    wallpapers: {
+        width: 260,
+        height: 260,
+    }
 });

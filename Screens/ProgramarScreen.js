@@ -5,13 +5,19 @@ const ProgramarScreen = ({navigation}) => {
     return (
         <View style={styles.container}>
             <Button 
-                title="TOP" 
-                onPress={()=>navigation.navigate('ReactScreen')}
+                title="Basico" 
+                onPress={()=>navigation.navigate('Basico')}
                 color='red'
             />
             <Button 
-                title="ADC" 
-                onPress={()=>navigation.navigate('JavascriptScreen')}
+                title="Intermedio" 
+                onPress={()=>navigation.navigate('Intermedio')}
+                color='red'
+                
+            />
+            <Button 
+                title="Avanzado" 
+                onPress={()=>navigation.navigate('Avanzado')}
                 color='red'
                 
             />

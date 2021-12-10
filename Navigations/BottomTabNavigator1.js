@@ -1,6 +1,6 @@
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import SettingsScreen from '../Screens/SettingsScreen';
+import Wallpaper from '../Screens/Wallpaper';
 import AboutScreen from '../Screens/AboutScreen';
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import HomeScreen from '../Navigations/StackNavigation1';
@@ -74,10 +74,10 @@ export default function BottomTabNavigator1(){
             
             />
             <Tab.Screen
-                name="Settings"
-                component={SettingsScreen}
+                name="Wallpaper"
+                component={Wallpaper}
                 options={{
-                    tabBarLabel:"Wallpapers",
+                    tabBarLabel:"Wallpaper",
                     tabBarIcon:({color})=>(
                         <Ionicons name={"images"} size={20} color={color}/>
                     )

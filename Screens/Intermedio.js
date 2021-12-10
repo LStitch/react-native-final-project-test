@@ -1,15 +1,17 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, Button } from 'react-native'
 import {Image} from 'react-native'
 
-export default function JavascriptScreen() {
+const Intermedio = ({navigation}) => {
     return (
         <View style={styles.container}>
-            <Image source={{uri: 'https://3con14.biz/js/_data/_config/js.png'}}
-                style={{width: 300, height: 350}}/>
+            <Image source={{uri: 'http://assets.stickpng.com/images/584830f5cef1014c0b5e4aa1.png'}}
+                style={{width: 300, height: 300}}/>
         </View>
     )
 }
+
+export default Intermedio
 
 const styles = StyleSheet.create({
     container: {
