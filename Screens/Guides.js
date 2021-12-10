@@ -23,6 +23,13 @@ const Guides = ({navigation}) => {
                 color='red'
                 
             />
+
+            <Button 
+                title="Channels Youtube" 
+                onPress={()=>navigation.navigate('ChannelsY')}
+                color='red'
+                
+            />
             <Image source={{uri: 'https://i.pinimg.com/originals/72/5e/fe/725efee99ebef2b70ab5103a0a3513f3.gif'}}
                 style={{width: 400, height: 200, alignSelf: 'center'}}/>
         </View>

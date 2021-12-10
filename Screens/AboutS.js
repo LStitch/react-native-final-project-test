@@ -9,7 +9,7 @@ export default function AboutScreen(props) {
         <View style={styles.container}>
             <ScrollView>
             <View>
-            <Text>{"\n"}</Text>
+            <Text>{"\n"}{"\n"}</Text>
             <Image source={Stitch} style={{width: 150, height: 150}}/>
             <Text style={styles.texto}>{"\n"}{props.nombre2}</Text>
             <Text style={styles.texto}>{"\n"}{props.numero}</Text>
@@ -20,7 +20,7 @@ export default function AboutScreen(props) {
             <Text style={styles.texto}>{"\n"}{props.nombre}</Text>
             <Text style={styles.texto}>{"\n"}{props.numero2}</Text>
             <Text style={styles.texto}>{"\n"}{props.carrera}</Text>
-            <Text style={styles.texto}>{"\n"}{props.semestre}{"\n"}</Text>
+            <Text style={styles.texto}>{"\n"}{props.semestre}{"\n"}{"\n"}{"\n"}</Text>
             </View>
             </ScrollView>
         </View>

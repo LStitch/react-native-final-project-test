@@ -4,6 +4,7 @@ import Guides from '../Screens/Guides';
 import Intermedio from '../Screens/Intermedio';
 import Basico from '../Screens/Basico';
 import Avanzado from '../Screens/Avanzado';
+import ChannelsY from '../Screens/ChannelsY';
 
 const Stack = createStackNavigator();
 
@@ -24,6 +25,10 @@ export default function StackNavigation1(){
 
             <Stack.Screen name="Avanzado" component={Avanzado}
                 options={{headerShown:true, headerTitle:'Avanzado'}}
+            />
+
+            <Stack.Screen name="ChannelsY" component={ChannelsY}
+                options={{headerShown:true, headerTitle:'Channels Youtube'}}
             />
         </Stack.Navigator>
 
