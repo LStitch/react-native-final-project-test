@@ -37,7 +37,7 @@ const SearchPlayer = ({navigation}) => {
             <Text style={{fontSize: 15, fontWeight: 'bold', color:'white'}}>{"\n"}League of Legends Player Search{"\n"}</Text>
             <TextInput style={styles.input} onChange={e => setSearchText(e.target.value)}></TextInput>
             <Text></Text>
-            <Button title="Search" onPress={(() => search4Player())}>Search</Button>
+            <Button color="#000" title="Search" onPress={(() => search4Player())}>Search</Button>
             {
                 playerData.length == 0
                 ?

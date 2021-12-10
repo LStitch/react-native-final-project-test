@@ -5,28 +5,10 @@ import { ScrollView } from 'react-native-gesture-handler';
 import Summoners from '../Images/summoners.png';
 
 export default function Basico() {
-    const sitelstitch = "https://lstitch-class.super.site";
-    const OpenURLButton = ({ url, children }) => {
-    const handlePress = useCallback(async () => {
-    // Checking if the link is supported for links with custom URL scheme.
-    const supported = await Linking.canOpenURL(url);
-
-    if (supported) {
-      // Opening the link with some app, if the URL scheme is "http" the web link should be opened
-      // by some browser in the mobile
-      await Linking.openURL(url);
-    } else {
-      Alert.alert(`Don't know how to open this URL: ${url}`);
-    }
-    }, [url]);
-
-    return <Button title={children} onPress={handlePress} />;
-    };
-
     return (
         <View style={styles.container}>
             <ScrollView>
-                <Text style={styles.titulo}>Enfriamiento de Summoners</Text>
+                <Text style={styles.titulo}>{"\n"}Enfriamiento de Summoners</Text>
                 <Image
                         source={Summoners}
                         style={styles.wallpapers}
@@ -88,10 +70,10 @@ export default function Basico() {
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#fff',
+      backgroundColor: '#000',
       alignItems: 'center',
       justifyContent: 'center',
-      margin: 10
+
     },
 
     wallpapers: {
@@ -103,18 +85,21 @@ const styles = StyleSheet.create({
 
     texto: {
         fontSize: 18,
-        textAlign: 'justify'
+        textAlign: 'justify',
+        color:'white',
     },
 
     negritas: {
         fontSize: 18,
         textAlign: 'justify',
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        color:'white',
     },
     
     titulo: {
         fontSize: 25,
-        textAlign: 'center'
+        textAlign: 'center',
+        color:'white',
     }
 });
   

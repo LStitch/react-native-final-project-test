@@ -1,6 +1,6 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
-import ProgramarScreen from '../Screens/ProgramarScreen';
+import Guides from '../Screens/Guides';
 import Intermedio from '../Screens/Intermedio';
 import Basico from '../Screens/Basico';
 import Avanzado from '../Screens/Avanzado';
@@ -10,7 +10,7 @@ const Stack = createStackNavigator();
 export default function StackNavigation1(){
     return(
         <Stack.Navigator screenOptions={{headerShown: false}}> 
-            <Stack.Screen name="ProgramarScreen" component={ProgramarScreen}
+            <Stack.Screen name="Guides" component={Guides}
                 options={{headerShown:false}}
             />
 

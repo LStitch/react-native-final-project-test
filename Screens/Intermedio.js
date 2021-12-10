@@ -2,11 +2,17 @@ import React from 'react'
 import { StyleSheet, Text, View, Button } from 'react-native'
 import {Image} from 'react-native'
 import { ScrollView } from 'react-native-gesture-handler'
+import Champs from '../Images/Champs.png';
 
 const Intermedio = ({navigation}) => {
     return (
         <View style={styles.container}>
             <ScrollView>
+                <Text style={styles.titulo}>{"\n"}Champs Easy to Climb</Text>
+                <Image
+                        source={Champs}
+                        style={styles.wallpapers}
+                />
                 <Text style={styles.titulo}>
                     Tips Anti Tilteo Intenso{"\n"}
                 </Text>
@@ -86,33 +92,36 @@ export default Intermedio
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#fff',
+      backgroundColor: '#000',
       alignItems: 'center',
       justifyContent: 'center',
-      margin: 10
+
     },
 
     wallpapers: {
-        width: 200,
-        height: 200,
+        width: 300,
+        height: 300,
         margin: 15,
         alignSelf: 'center'
     },
 
     texto: {
         fontSize: 18,
-        textAlign: 'justify'
+        textAlign: 'justify',
+        color:'white',
     },
 
     negritas: {
         fontSize: 18,
         textAlign: 'justify',
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        color:'white',
     },
     
     titulo: {
         fontSize: 25,
-        textAlign: 'center'
+        textAlign: 'center',
+        color:'white',
     }
 });
   

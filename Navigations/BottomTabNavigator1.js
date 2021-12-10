@@ -5,7 +5,7 @@ import AboutScreen from '../Screens/AboutScreen';
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import HomeScreen from '../Navigations/StackNavigation1';
 import SearchScreen from '../Screens/SearchScreen';
-import ProgramarScreen from '../Navigations/StackNavigation2';
+import Guides from '../Navigations/StackNavigation2';
 import RolesScreen from './TopTapNavigator1';
 
 const Tab = createBottomTabNavigator();
@@ -52,8 +52,8 @@ export default function BottomTabNavigator1(){
             
             />
             <Tab.Screen
-                name="Programar"
-                component={ProgramarScreen}
+                name="Guides"
+                component={Guides}
                 options={{
                     tabBarLabel:"Guides",
                     tabBarIcon:({color})=>(

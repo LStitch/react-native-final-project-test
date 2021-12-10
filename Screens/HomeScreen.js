@@ -9,7 +9,7 @@ const HomeScreen = ({navigation}) => {
             <Image source={{uri: 'https://c.tenor.com/JlqocrEEmlMAAAAC/darius-league-of-legends.gif'}}
                 style={{width: 400, height: 620}}/>
             <Text></Text>
-            <Text style={{fontSize: 20, fontWeight: 'bold', textAlign:'center'}}>Welcome to LoL Learning App</Text>
+            <Text style={{fontSize: 20, fontWeight: 'bold', textAlign:'center', color:'white'}}>Welcome to LoL Learning App</Text>
         </View>
     )
 }
@@ -19,7 +19,7 @@ export default HomeScreen
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#fff',
+      backgroundColor: '#000',
       alignItems: 'center',
       justifyContent: 'center',
       marginTop: Constants.statusBarHeight,
