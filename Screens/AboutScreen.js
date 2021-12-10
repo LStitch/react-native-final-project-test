@@ -1,22 +1,28 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 import Constants from 'expo-constants';
+import { ScrollView } from 'react-native-gesture-handler';
+import Abautscreen from './AboutS';
 
-export default function AboutScreen() {
+export default function App() {
     return (
-        <View style={styles.container}>
-            <Text style={{fontSize: 30, fontWeight: 'bold', color: '#FFFFFF'}}>Acerca de...</Text>
-        </View>
-    )
-}
+      <View style={styles.container}>
+        <Abautscreen
+        nombre="gerardo vega guerrero"
+        nombre2="Gómez Flores Jesús Leonardo"
+        carrera="tecnologias de la infomracion y la comunicacion"
+        semestre="7to semestre"
+        numero={18212079}
+        numero2={12345677}
+        />
+      </View>
+    );
+  }
 
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#000',
-      alignItems: 'center',
-      justifyContent: 'space-around',
-      marginTop: Constants.statusBarHeight,
+      justifyContent: 'center',
+      backgroundColor: '#ecf0f1',
     },
 });
-  
